@@ -19,7 +19,7 @@
 /*     Parallellization of assigning ITG values to a field	 */
 
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>

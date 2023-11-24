@@ -36,7 +36,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <io.h>
 #include "CalculiX.h"
 #include "spooles.h"
 

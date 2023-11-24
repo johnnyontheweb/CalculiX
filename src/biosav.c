@@ -15,7 +15,7 @@
 /*     along with this program; if not, write to the Free Software       */
 /*     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.         */
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -160,7 +160,7 @@ void biosav(ITG *ipkon,ITG *kon,char *lakon,ITG *ne,double *co,
     printf(" Using up to %" ITGFORMAT " cpu(s) for the Biot-Savart calculation.\n\n", num_cpus);
     
     /* create threads and wait */
-    
+
     pthread_t tid[num_cpus];
     
     NNEW(ithread,ITG,num_cpus);

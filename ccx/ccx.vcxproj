@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e9892b0e-9701-4695-8c65-44e1ecc4134b}</ProjectGuid>
+    <RootNamespace>ccx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ARCH="HP";_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\pthreads_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);ARCH="HP";_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\pthreads_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ARCH=4;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\pthreads_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);ARCH=4;_CRT_SECURE_NO_WARNINGS;HAVE_STRUCT_TIMESPEC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\pthreads_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\add_rect.c" />
+    <ClCompile Include="..\src\arpack.c" />
+    <ClCompile Include="..\src\arpackbu.c" />
+    <ClCompile Include="..\src\arpackcs.c" />
+    <ClCompile Include="..\src\bdfill.c" />
+    <ClCompile Include="..\src\biosav.c" />
+    <ClCompile Include="..\src\buildtquad.c" />
+    <ClCompile Include="..\src\calcresidual.c" />
+    <ClCompile Include="..\src\calcresidual_em.c" />
+    <ClCompile Include="..\src\calcshapef.c" />
+    <ClCompile Include="..\src\CalculiX.c" />
+    <ClCompile Include="..\src\CalculiXstep.c" />
+    <ClCompile Include="..\src\call_external_umat.c" />
+    <ClCompile Include="..\src\call_external_umat_user.c" />
+    <ClCompile Include="..\src\cascade.c" />
+    <ClCompile Include="..\src\checkconvergence.c" />
+    <ClCompile Include="..\src\checkconvnet.c" />
+    <ClCompile Include="..\src\checkdivergence.c" />
+    <ClCompile Include="..\src\checkinclength.c" />
+    <ClCompile Include="..\src\compare.c" />
+    <ClCompile Include="..\src\compfluidfem.c" />
+    <ClCompile Include="..\src\complexfreq.c" />
+    <ClCompile Include="..\src\contact.c" />
+    <ClCompile Include="..\src\contactmortar.c" />
+    <ClCompile Include="..\src\convert2rowbyrow.c" />
+    <ClCompile Include="..\src\cpypardou.c" />
+    <ClCompile Include="..\src\cpyparitg.c" />
+    <ClCompile Include="..\src\crackfrd.c" />
+    <ClCompile Include="..\src\crackpropagation.c" />
+    <ClCompile Include="..\src\crackpropdata.c" />
+    <ClCompile Include="..\src\dam1parll.c" />
+    <ClCompile Include="..\src\dam2parll.c" />
+    <ClCompile Include="..\src\dealloc_cal.c" />
+    <ClCompile Include="..\src\decascade_mortar.c" />
+    <ClCompile Include="..\src\dfdbj.c" />
+    <ClCompile Include="..\src\dgmresmain.c" />
+    <ClCompile Include="..\src\divparll.c" />
+    <ClCompile Include="..\src\dudsmain.c" />
+    <ClCompile Include="..\src\dyna.c" />
+    <ClCompile Include="..\src\dynboun.c" />
+    <ClCompile Include="..\src\electromagnetics.c" />
+    <ClCompile Include="..\src\elemChecker.c" />
+    <ClCompile Include="..\src\elementcpuload.c" />
+    <ClCompile Include="..\src\expand.c" />
+    <ClCompile Include="..\src\external.c" />
+    <ClCompile Include="..\src\feasibledirection.c" />
+    <ClCompile Include="..\src\filtermain_backward.c" />
+    <ClCompile Include="..\src\filtermain_forward.c" />
+    <ClCompile Include="..\src\forparll.c" />
+    <ClCompile Include="..\src\frd.c" />
+    <ClCompile Include="..\src\frdcyc.c" />
+    <ClCompile Include="..\src\frdgeneralvector.c" />
+    <ClCompile Include="..\src\frdheader.c" />
+    <ClCompile Include="..\src\frdselect.c" />
+    <ClCompile Include="..\src\frdset.c" />
+    <ClCompile Include="..\src\frdvector.c" />
+    <ClCompile Include="..\src\frd_sen.c" />
+    <ClCompile Include="..\src\frecord.c" />
+    <ClCompile Include="..\src\genrandmain.c" />
+    <ClCompile Include="..\src\getglobalresults.c" />
+    <ClCompile Include="..\src\getlocalresults.c" />
+    <ClCompile Include="..\src\getSystemCPUs.c" />
+    <ClCompile Include="..\src\getuncrackedresults.c" />
+    <ClCompile Include="..\src\gradientprojection.c" />
+    <ClCompile Include="..\src\inclusion.c" />
+    <ClCompile Include="..\src\inicont.c" />
+    <ClCompile Include="..\src\inimortar.c" />
+    <ClCompile Include="..\src\iniparll.c" />
+    <ClCompile Include="..\src\ini_cal.c" />
+    <ClCompile Include="..\src\insert.c" />
+    <ClCompile Include="..\src\insertas.c" />
+    <ClCompile Include="..\src\insertas_ws.c" />
+    <ClCompile Include="..\src\insertcbs.c" />
+    <ClCompile Include="..\src\insertfreq.c" />
+    <ClCompile Include="..\src\insertrad.c" />
+    <ClCompile Include="..\src\insert_cmatrix.c" />
+    <ClCompile Include="..\src\interpolatestatemain.c" />
+    <ClCompile Include="..\src\interpoltetmain.c" />
+    <ClCompile Include="..\src\linstatic.c" />
+    <ClCompile Include="..\src\mafilldmssmain.c" />
+    <ClCompile Include="..\src\mafillsmasmain.c" />
+    <ClCompile Include="..\src\mafillsmmain.c" />
+    <ClCompile Include="..\src\mafillsmmain_se.c" />
+    <ClCompile Include="..\src\massless.c" />
+    <ClCompile Include="..\src\mastruct.c" />
+    <ClCompile Include="..\src\mastructcmatrix.c" />
+    <ClCompile Include="..\src\mastructcs.c" />
+    <ClCompile Include="..\src\mastructdmatrix.c" />
+    <ClCompile Include="..\src\mastructem.c" />
+    <ClCompile Include="..\src\mastructffem.c" />
+    <ClCompile Include="..\src\mastructfilter.c" />
+    <ClCompile Include="..\src\mastructmatrix.c" />
+    <ClCompile Include="..\src\mastructmatrixcs.c" />
+    <ClCompile Include="..\src\mastructnmatrix.c" />
+    <ClCompile Include="..\src\mastructrad.c" />
+    <ClCompile Include="..\src\mastructrand.c" />
+    <ClCompile Include="..\src\mastructread.c" />
+    <ClCompile Include="..\src\mastructreadcs.c" />
+    <ClCompile Include="..\src\mastructse.c" />
+    <ClCompile Include="..\src\matrixsort.c" />
+    <ClCompile Include="..\src\matrixstorage.c" />
+    <ClCompile Include="..\src\mortar_postfrd.c" />
+    <ClCompile Include="..\src\mortar_prefrd.c" />
+    <ClCompile Include="..\src\mulmatvec_asymmain.c" />
+    <ClCompile Include="..\src\multimortar.c" />
+    <ClCompile Include="..\src\multi_rect.c" />
+    <ClCompile Include="..\src\multi_rectv.c" />
+    <ClCompile Include="..\src\multi_scal.c" />
+    <ClCompile Include="..\src\nonlingeo.c" />
+    <ClCompile Include="..\src\objectivemain_se.c" />
+    <ClCompile Include="..\src\opmain.c" />
+    <ClCompile Include="..\src\packagingmain.c" />
+    <ClCompile Include="..\src\pardiso.c" />
+    <ClCompile Include="..\src\pardiso_cp.c" />
+    <ClCompile Include="..\src\pastix.c" />
+    <ClCompile Include="..\src\pcgsolver.c" />
+    <ClCompile Include="..\src\peeq_sen_dv.c" />
+    <ClCompile Include="..\src\peeq_sen_dx.c" />
+    <ClCompile Include="..\src\precontact.c" />
+    <ClCompile Include="..\src\predgmres_struct_mt.c" />
+    <ClCompile Include="..\src\prediction.c" />
+    <ClCompile Include="..\src\prediction_em.c" />
+    <ClCompile Include="..\src\preiter.c" />
+    <ClCompile Include="..\src\premortar.c" />
+    <ClCompile Include="..\src\preparll.c" />
+    <ClCompile Include="..\src\printenergy.c" />
+    <ClCompile Include="..\src\radcyc.c" />
+    <ClCompile Include="..\src\radflowload.c" />
+    <ClCompile Include="..\src\randomfieldmain.c" />
+    <ClCompile Include="..\src\readfrd.c" />
+    <ClCompile Include="..\src\readinput.c" />
+    <ClCompile Include="..\src\readnewmesh.c" />
+    <ClCompile Include="..\src\refinemesh.c" />
+    <ClCompile Include="..\src\remastruct.c" />
+    <ClCompile Include="..\src\remastructar.c" />
+    <ClCompile Include="..\src\remastructem.c" />
+    <ClCompile Include="..\src\res1parll.c" />
+    <ClCompile Include="..\src\res2parll.c" />
+    <ClCompile Include="..\src\res3parll.c" />
+    <ClCompile Include="..\src\res4parll.c" />
+    <ClCompile Include="..\src\resforccont.c" />
+    <ClCompile Include="..\src\results.c" />
+    <ClCompile Include="..\src\resultsforc.c" />
+    <ClCompile Include="..\src\resultsinduction.c" />
+    <ClCompile Include="..\src\resultsini.c" />
+    <ClCompile Include="..\src\resultsstr.c" />
+    <ClCompile Include="..\src\results_se.c" />
+    <ClCompile Include="..\src\rhsmain.c" />
+    <ClCompile Include="..\src\robustdesign.c" />
+    <ClCompile Include="..\src\sensitivity_out.c" />
+    <ClCompile Include="..\src\sensi_coor.c" />
+    <ClCompile Include="..\src\sensi_orien.c" />
+    <ClCompile Include="..\src\setpardou.c" />
+    <ClCompile Include="..\src\setparitg.c" />
+    <ClCompile Include="..\src\sgi.c" />
+    <ClCompile Include="..\src\solveeq.c" />
+    <ClCompile Include="..\src\spooles.c" />
+    <ClCompile Include="..\src\steadystate.c" />
+    <ClCompile Include="..\src\stof.c" />
+    <ClCompile Include="..\src\stoi.c" />
+    <ClCompile Include="..\src\storecontactdof.c" />
+    <ClCompile Include="..\src\stos.c" />
+    <ClCompile Include="..\src\strcmp1.c" />
+    <ClCompile Include="..\src\strcmp2.c" />
+    <ClCompile Include="..\src\strcpy1.c" />
+    <ClCompile Include="..\src\strcpy2.c" />
+    <ClCompile Include="..\src\stressmortar.c" />
+    <ClCompile Include="..\src\stress_sen_dv.c" />
+    <ClCompile Include="..\src\stress_sen_dx.c" />
+    <ClCompile Include="..\src\strsplt.c" />
+    <ClCompile Include="..\src\tau.c" />
+    <ClCompile Include="..\src\thicknessmain.c" />
+    <ClCompile Include="..\src\tiedcontact.c" />
+    <ClCompile Include="..\src\trafontmortar2.c" />
+    <ClCompile Include="..\src\trafontspcmpc.c" />
+    <ClCompile Include="..\src\transformspcsmpcs_quad.c" />
+    <ClCompile Include="..\src\transitionmain.c" />
+    <ClCompile Include="..\src\transpose.c" />
+    <ClCompile Include="..\src\utempread.c" />
+    <ClCompile Include="..\src\u_calloc.c" />
+    <ClCompile Include="..\src\u_free.c" />
+    <ClCompile Include="..\src\u_malloc.c" />
+    <ClCompile Include="..\src\u_realloc.c" />
+    <ClCompile Include="..\src\v_betrag.c" />
+    <ClCompile Include="..\src\v_prod.c" />
+    <ClCompile Include="..\src\v_result.c" />
+    <ClCompile Include="..\src\worparll.c" />
+    <ClCompile Include="..\src\writeheading.c" />
+    <ClCompile Include="..\src\writenewmesh.c" />
+    <ClCompile Include="..\src\writeoldmesh.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CalculiX.h" />
+    <ClInclude Include="..\src\matrixstorage.h" />
+    <ClInclude Include="..\src\mortar.h" />
+    <ClInclude Include="..\src\pardiso.h" />
+    <ClInclude Include="..\src\pastix.h" />
+    <ClInclude Include="..\src\readfrd.h" />
+    <ClInclude Include="..\src\sgi.h" />
+    <ClInclude Include="..\src\spooles.h" />
+    <ClInclude Include="..\src\tau.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

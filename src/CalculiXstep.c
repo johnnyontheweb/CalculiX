@@ -259,7 +259,7 @@ void CalculiXstep(int argc,char argv[][133],ITG **nelemloadp,double **xloadp,
     // end change DLR
 
    
-    clock_gettime(CLOCK_MONOTONIC, &totalCalculixTimeStart);
+    clock_gettime(GetTickCount(), &totalCalculixTimeStart);
 
     if(argc==1){printf("Usage: CalculiX.exe -i jobname\n");FORTRAN(stop,());}
     else{
@@ -285,7 +285,7 @@ void CalculiXstep(int argc,char argv[][133],ITG **nelemloadp,double **xloadp,
 	strcpy1(jobnamef,argv[1],132);}
     }
 
-    putenv("CCX_JOBNAME_GETJOBNAME=jobnamec");
+    _putenv("CCX_JOBNAME_GETJOBNAME=jobnamec");
 
 #ifdef BAM
     ITG lop=0,lrestart=0,kstep=1,kinc=1;
@@ -2055,7 +2055,7 @@ void CalculiXstep(int argc,char argv[][133],ITG **nelemloadp,double **xloadp,
   calculix_freeExternalBehaviours();
 #endif /* CALCULIX_EXTERNAL_BEHAVIOURS_SUPPORT */
 
-  clock_gettime(CLOCK_MONOTONIC, &totalCalculixTimeEnd); 
+  clock_gettime(GetTickCount(), &totalCalculixTimeEnd);
 
   totalCalculixTime = (totalCalculixTimeEnd.tv_sec - totalCalculixTimeStart.tv_sec) * 1e9; 
   totalCalculixTime = (totalCalculixTime + (totalCalculixTimeEnd.tv_nsec - totalCalculixTimeStart.tv_nsec)) * 1e-9;

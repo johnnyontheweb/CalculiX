@@ -20,7 +20,7 @@
 /*     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.         */
 /* --------------------------------------------------------------------  */
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -31,7 +31,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
+#include <io.h>
 #include "readfrd.h"
 
 #define TEST     0

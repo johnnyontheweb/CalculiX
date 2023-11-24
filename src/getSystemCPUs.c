@@ -18,7 +18,7 @@
 	for both *NIX and Windows systems. Convergent Mechanical, Dec 5, 2012
 */
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -35,7 +35,7 @@ ITG getSystemCPUs(){
 }
 
 #else
-#include <unistd.h>
+#include <io.h>
 
 ITG getSystemCPUs(){
 	return sysconf(_SC_NPROCESSORS_CONF);;

@@ -18,7 +18,7 @@
 /*     A parallel part in prediction.c	 */
 
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>

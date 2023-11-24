@@ -112,7 +112,7 @@ int main(int argc,char *argv[])
   MPI_Comm_size(MPI_COMM_WORLD, &nproc) ;
 #endif
 
-  clock_gettime(CLOCK_MONOTONIC, &totalCalculixTimeStart);
+  clock_gettime(GetTickCount(), &totalCalculixTimeStart);
 
   if(argc==1){printf("Usage: CalculiX.exe -i jobname\n");FORTRAN(stop,());}
   else{
@@ -138,7 +138,7 @@ int main(int argc,char *argv[])
       strcpy1(jobnamef,argv[1],132);}
   }
 
-  putenv("CCX_JOBNAME_GETJOBNAME=jobnamec");
+  _putenv("CCX_JOBNAME_GETJOBNAME=jobnamec");
 
 #ifdef BAM
   ITG lop=0,lrestart=0,kstep=1,kinc=1;
@@ -1907,7 +1907,7 @@ int main(int argc,char *argv[])
   calculix_freeExternalBehaviours();
 #endif /* CALCULIX_EXTERNAL_BEHAVIOURS_SUPPORT */
 
-  clock_gettime(CLOCK_MONOTONIC, &totalCalculixTimeEnd); 
+  clock_gettime(GetTickCount(), &totalCalculixTimeEnd);
 
   totalCalculixTime = (totalCalculixTimeEnd.tv_sec - totalCalculixTimeStart.tv_sec) * 1e9; 
   totalCalculixTime = (totalCalculixTime + (totalCalculixTimeEnd.tv_nsec - totalCalculixTimeStart.tv_nsec)) * 1e-9;

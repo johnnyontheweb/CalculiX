@@ -17,7 +17,7 @@
 
 /*     parallellization of the calculation of the forces in resultsforc.c */
 
-#include <unistd.h>
+#include <io.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
